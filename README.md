@@ -31,3 +31,5 @@ oc adm policy add-scc-to-user privileged -z nfs-pod-provisioner-sa
 oc apply -f .
 
 oc patch storageclass nfs -p '{"metadata": {"annotations": {"storageclass.kubernetes.io/is-default-class": "true"}}}'
+
+oc edit configs.imageregistry.operator.openshift.io
