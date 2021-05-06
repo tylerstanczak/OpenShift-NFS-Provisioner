@@ -32,4 +32,4 @@ oc apply -f .
 
 oc patch storageclass nfs -p '{"metadata": {"annotations": {"storageclass.kubernetes.io/is-default-class": "true"}}}'
 
-oc edit configs.imageregistry.operator.openshift.io
+oc patch configs.imageregistry.operator.openshift.io cluster -p '{"spec":{"managementState":"Managed","storage":{"pvc":{"claim":"image-registry-storage"}}}}' --type=merge
