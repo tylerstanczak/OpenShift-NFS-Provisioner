@@ -28,6 +28,8 @@ oc new-project nfs
 
 oc adm policy add-scc-to-user privileged -z nfs-pod-provisioner-sa
 
+edit the provisioner.yaml deployment file
+
 oc apply -f .
 
 oc patch storageclass nfs -p '{"metadata": {"annotations": {"storageclass.kubernetes.io/is-default-class": "true"}}}'
