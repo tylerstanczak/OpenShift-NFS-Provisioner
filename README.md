@@ -1,3 +1,6 @@
+# Basic Steps
+###### Not refined or cleaned up
+## Set up NFS Machine
 sudo yum -y update
 sudo hostnamectl set-hostname server.example.com --static
 
@@ -22,6 +25,7 @@ echo "/nfs	*(rw,no_subtree_check,sync,no_wdelay,insecure,no_root_squash)" >> /et
 
 sudo exportfs -rav
 
+## Set up NFS Provisioner in OCP
 oc login
 
 oc new-project nfs
