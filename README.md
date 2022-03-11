@@ -2,6 +2,7 @@
 ###### Not refined or cleaned up
 ## Set up NFS Machine
 sudo yum -y update
+
 sudo hostnamectl set-hostname server.example.com --static
 
 sudo yum -y install nfs-utils
